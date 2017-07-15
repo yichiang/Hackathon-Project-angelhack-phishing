@@ -8,14 +8,24 @@ import Home from './Home';
 import App from './App';
 import './index.css';
 
+// ReactDOM.render(
+//   <Router>
+//     <div>
+//       <Route exact path="/" component={(props) => <App {...props}/>} />
+//       <Route path="/home" component={Home} />
+//     </div>
+//   </Router>,
+//   document.getElementById('root')
+// );
+
+import { makeMainRoutes } from './routes';
+
+const routes = makeMainRoutes();
+
 ReactDOM.render(
-  <Router>
-    <div>
-      <Route exact path="/" component={(props) => <App {...props}/>} />
-      <Route path="/home" component={Home} />
-    </div>
-  </Router>,
+  routes,
   document.getElementById('root')
 );
+
 
 registerServiceWorker();

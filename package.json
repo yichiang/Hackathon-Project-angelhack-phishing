@@ -11,7 +11,12 @@
   "devDependencies": {
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.2"
+    "react-scripts": "1.0.2",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.68.3",
+    "auth0-js": "^8.7.0",
+    "bootstrap": "^3.3.7",
+    "react-bootstrap": "^0.31.0"
   },
   "scripts": {
     "start": "react-scripts start",
