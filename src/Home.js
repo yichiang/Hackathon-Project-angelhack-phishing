@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-import { Input, Menu, Segment } from 'semantic-ui-react'
-
+import { Icon, Input, Menu, Segment } from 'semantic-ui-react'
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+const data = [
+      {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
+      {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
+      {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
+      {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
+      {name: 'Page E', uv: 1890, pv: 4800, amt: 2181},
+      {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
+      {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
+];
 const items = [
   { key: 'editorials', active: true, name: 'Editorials' },
   { key: 'review', name: 'Reviews' },
@@ -57,7 +66,7 @@ class Home extends Component {
             <Segment>
               <Menu vertical>
                       <Menu.Item>
-                        <Menu.Header>Products</Menu.Header>
+                        <Menu.Header>Header A</Menu.Header>
 
                         <Menu.Menu>
                           <Menu.Item name='enterprise' active={activeItem2 === 'enterprise'} onClick={this.handleItemClick} />
@@ -66,21 +75,21 @@ class Home extends Component {
                       </Menu.Item>
 
                       <Menu.Item>
-                        <Menu.Header>CMS Solutions</Menu.Header>
+                        <Menu.Header>Header B</Menu.Header>
 
                         <Menu.Menu>
-                          <Menu.Item name='rails' active={activeItem2 === 'rails'} onClick={this.handleItemClick} />
-                          <Menu.Item name='python' active={activeItem2 === 'python'} onClick={this.handleItemClick} />
-                          <Menu.Item name='php' active={activeItem2 === 'php'} onClick={this.handleItemClick} />
+                          <Menu.Item name='normal' active={activeItem2 === 'normal'} onClick={this.handleItemClick} />
+                          <Menu.Item name='warning' active={activeItem2 === 'warning'} onClick={this.handleItemClick} />
+                          <Menu.Item name='danger' active={activeItem2 === 'danger'} onClick={this.handleItemClick} />
                         </Menu.Menu>
                       </Menu.Item>
 
                       <Menu.Item>
-                        <Menu.Header>Hosting</Menu.Header>
+                        <Menu.Header>Header C</Menu.Header>
 
                         <Menu.Menu>
                           <Menu.Item name='shared' active={activeItem2 === 'shared'} onClick={this.handleItemClick} />
-                          <Menu.Item name='dedicated' active={activeItem2 === 'dedicated'} onClick={this.handleItemClick} />
+                          <Menu.Item name='remove' active={activeItem2 === 'remove'} onClick={this.handleItemClick} />
                         </Menu.Menu>
                       </Menu.Item>
 
@@ -101,7 +110,19 @@ class Home extends Component {
 
             </Segment>
           <Segment>
+            <Icon name='dashboard' />
             Overview
+
+            <LineChart width={600} height={300} data={data}
+            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+       <XAxis dataKey="name"/>
+       <YAxis/>
+       <CartesianGrid strokeDasharray="3 3"/>
+       <Tooltip/>
+       <Legend />
+       <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
+       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      </LineChart>
           </Segment>
           </div>
       </div>

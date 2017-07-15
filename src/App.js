@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
+import { Navbar, Button, Nav, NavItem } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'semantic-ui-css/semantic.min.css';
@@ -34,30 +34,38 @@ class App extends Component {
             >
               Home
             </Button>
-            {
-              !isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.login.bind(this)}
-                  >
-                    Log In
-                  </Button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.logout.bind(this)}
-                  >
-                    Log Out
-                  </Button>
-                )
-            }
+            {/* <Navbar.Collapse> */}
+              <Nav pullRight>
+                {
+                  !isAuthenticated() && (
+                      <NavItem
+                        // bsStyle="primary"
+                        // className="btn-margin"
+                        onClick={this.login.bind(this)}
+                      >
+                        Log In
+                      </NavItem>
+                    )
+                }
+                {/* <NavItem eventKey={1} href="#"></NavItem> */}
+                {/* <NavItem eventKey={2} href="#">Link Right</NavItem> */}
+                {
+                  isAuthenticated() && (
+                      <NavItem
+                        // bsStyle="primary"
+                        // className="btn-margin"
+                        onClick={this.logout.bind(this)}
+                      >
+                        Log Out
+                      </NavItem>
+                    )
+                }
+              </Nav>
+
+            {/* </Navbar.Collapse> */}
           </Navbar.Header>
         </Navbar>
+
       </div>
     );
   }

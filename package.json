@@ -6,7 +6,8 @@
     "firebase": "^4.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router": "^4.1.1"
+    "react-router": "^4.1.1",
+    "recharts": "^1.0.0-alpha.2"
   },
   "devDependencies": {
     "react-router": "^4.1.1",
