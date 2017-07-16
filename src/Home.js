@@ -13,20 +13,19 @@ const panels = [
   title: `Immediate Attention Required`,
   color: 'red',
   className: 'green',
- content: 'immediate attention required',
+ content: links.filter(t=>t.danger ===1).map(x=> x.link + ", "),
 },
 {
   title: `Review required`,
    color: 'orange',
    className: 'green',
-   content: 'immediate attention required',
+   content: links.filter(t=>t.danger ===2).map(x=> x.link + ", "),
 },
 {
   title: 'Safe URL',
   color: 'green',
   className: 'green',
-
-  content: 'immediate attention required',
+  content: links.filter(t=>t.danger ===3).map(x=> x.link + ", "),
 },
 ]
 const data = [
@@ -102,7 +101,7 @@ class Home extends Component {
                 </Menu.Item>
               </Menu.Menu>
             </Menu>
-            {activeItem === 'warning'&&
+            {activeItem === 'report'&&
           <div>
             <Grid celled>
                 <Grid.Row>
@@ -115,8 +114,7 @@ class Home extends Component {
                               </Menu.Header>
 
                               <Menu.Menu>
-                                <Menu.Item name='information1' active={activeItem2 === 'information1'} onClick={this.handleItemClick2} />
-                                {/* <Menu.Item name='consumer' active={activeItem2 === 'consumer'} onClick={this.handleItemClick2} /> */}
+                                <Menu.Item content="links" name='information1' active={activeItem2 === 'information1'} onClick={this.handleItemClick2} />
                               </Menu.Menu>
                             </Menu.Item>
 
@@ -127,9 +125,7 @@ class Home extends Component {
                               </Menu.Header>
 
                               <Menu.Menu>
-                                <Menu.Item name='information2' active={activeItem2 === 'information2'} onClick={this.handleItemClick2} />
-                                {/* <Menu.Item name='warning' active={activeItem2 === 'warning'} onClick={this.handleItemClick2} /> */}
-                                {/* <Menu.Item name='danger' active={activeItem2 === 'danger'} onClick={this.handleItemClick2} /> */}
+                                <Menu.Item content="links" name='information2' active={activeItem2 === 'information2'} onClick={this.handleItemClick2} />
                               </Menu.Menu>
                             </Menu.Item>
 
@@ -139,8 +135,7 @@ class Home extends Component {
                                 Safe
                               </Menu.Header>
                               <Menu.Menu>
-                                <Menu.Item name='information3' active={activeItem2 === 'information3'} onClick={this.handleItemClick2} />
-                                {/* <Menu.Item name='remove' active={activeItem2 === 'remove'} onClick={this.handleItemClick2} /> */}
+                                <Menu.Item content="links" name='information3' active={activeItem2 === 'information3'} onClick={this.handleItemClick2} />
                               </Menu.Menu>
                             </Menu.Item>
 
@@ -169,7 +164,7 @@ class Home extends Component {
                                     <Card>
                                     {t.danger === dangerIndex &&
                                       <Card.Content>
-                                        <Card.Header>{index}</Card.Header>
+                                        {/* <Card.Header>{index}</Card.Header> */}
                                         <Card.Meta>
                                           {t.danger == 1 &&
                                             <Icon name='warning circle' color='red' />
