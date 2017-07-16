@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Project SWORDPHISH Demo",
+  "description": "This extension demos the SWORDPHISH content guard",
+  "version": "1.0",
+  "browser-action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "browser_action": {
+    "default_title": "SWORDPHISH Content Guard",
+    "default_popup": "popup.html"
+  }
+}
