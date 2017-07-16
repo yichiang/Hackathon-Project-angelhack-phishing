@@ -36,7 +36,7 @@ class App extends Component {
             </Button>
             {/* <Navbar.Collapse> */}
               <Nav pullRight>
-                {
+                {/* {
                   !isAuthenticated() && (
                       <NavItem
                         // bsStyle="primary"
@@ -46,10 +46,10 @@ class App extends Component {
                         Log In
                       </NavItem>
                     )
-                }
+                } */}
                 {/* <NavItem eventKey={1} href="#"></NavItem> */}
                 {/* <NavItem eventKey={2} href="#">Link Right</NavItem> */}
-                {
+                {/* {
                   isAuthenticated() && (
                       <NavItem
                         // bsStyle="primary"
@@ -59,7 +59,7 @@ class App extends Component {
                         Log Out
                       </NavItem>
                     )
-                }
+                } */}
               </Nav>
 
             {/* </Navbar.Collapse> */}

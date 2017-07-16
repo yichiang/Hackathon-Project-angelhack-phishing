@@ -39,8 +39,8 @@ export const makeMainRoutes = () => {
   return (
     <BrowserRouter history={history} component={Container} auth={auth}>
         <div>
-          <Route path="/" render={(props) => <App auth={auth} {...props} />}  onEnter={requireAuth}/>
-          <Route path="/home" render={(props) => <Home auth={auth} {...props} />} onEnter={requireAuth} />
+          <Route path="/home" render={(props) => <App auth={auth} {...props} />}  onEnter={requireAuth}/>
+          <Route path="/" render={(props) => <Home auth={auth} {...props} />} onEnter={requireAuth} />
           <Route path="/login" render={(props) => <Login auth={auth} {...props} />} />
 
           <Route path="/callback" render={(props) => {

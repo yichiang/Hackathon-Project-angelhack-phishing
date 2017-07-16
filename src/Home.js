@@ -68,7 +68,7 @@ class Home extends Component {
       }
     return (
       <div className="container">
-        {
+        {/* {
           isAuthenticated() && (
               <h4>
                 You are logged in!
@@ -88,7 +88,7 @@ class Home extends Component {
                 {' '}to continue.
               </h4>
             )
-        }
+        } */}
         <div>
           <Menu pointing>
               <Menu.Item name='report' active={activeItem === 'report'} onClick={this.handleItemClick} />
