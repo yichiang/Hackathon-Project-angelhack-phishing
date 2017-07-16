@@ -23,7 +23,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 
     <title></title>
   </head>
@@ -34,6 +35,8 @@
     <!-- </script> -->
     <div id="root"></div>
 
+    <div id="container" style="height: 500px; min-width: 310px; max-width: 500px; margin: 0 auto"></div>
+    <div id="drag"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
