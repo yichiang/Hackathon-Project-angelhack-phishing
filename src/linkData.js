@@ -1,11 +1,11 @@
 var links =[{
   "id": 1,
-  "link": "https://fastcompany.com/donec/quis/orci.jpg",
+  "link": "https://fastcompany.com/donec/quis",
   "danger": 2,
   "origin": "Portugal"
 }, {
   "id": 2,
-  "link": "http://fotki.com/ultrices/enim/p",
+  "link": "http://fotki.com/ultrices/enim",
   "danger": 2,
   "origin": "Iraq"
 }, {
@@ -15,7 +15,7 @@ var links =[{
   "origin": "Palestinian Territory"
 }, {
   "id": 4,
-  "link": "https://diigo.com/aenean/fermentum/donec/ut/mauris/eget/",
+  "link": "https://diigo.com/aenean/fermentum/",
   "danger": 3,
   "origin": "Kenya"
 }, {
@@ -41,7 +41,7 @@ var links =[{
   "id": 9,
   "link": "https://chicagotribune.com/",
   "danger": 3,
-  "origin": "Democratic Republic of the Congo"
+  "origin": "Brazil"
 }, {
   "id": 10,
   "link": "https://ucoz.ru/in/hac/habitasse/",
@@ -74,7 +74,7 @@ var links =[{
   "origin": "China"
 }, {
   "id": 16,
-  "link": "http://sfgate.com/pulvinar/lobortis.png?"
+  "link": "http://sfgate.com/pulvinar/lobortis"
   ,"danger": 1,
   "origin": "Nepal"
 }, {

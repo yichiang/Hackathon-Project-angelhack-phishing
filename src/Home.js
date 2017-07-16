@@ -198,25 +198,32 @@ class Home extends Component {
             </div>
             }
             {activeItem === 'report'&&
-            <Segment>
-              <Segment>
-                <Icon name='dashboard' />
-                Overview
+            // <Segment>
+              <Grid celled>
+                  <Grid.Row>
+                    <Grid.Column width={9} className="borderNone">
+                      <Icon name='dashboard' />
+                      Overview
 
-                <LineChart width={600} height={300} data={data}
-                margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-           <XAxis dataKey="name"/>
-           <YAxis/>
-           <CartesianGrid strokeDasharray="3 3"/>
-           <Tooltip/>
-           <Legend />
-           <Line type="monotone" dataKey="thisYear" stroke="#8884d8" activeDot={{r: 8}}/>
-           <Line type="monotone" dataKey="lastYear" stroke="#82ca9d" />
-          </LineChart>
-              </Segment>
-              <Accordion panels={panels} className="customerAccordion" styled />
+                            <LineChart width={600} height={300} data={data}
+                            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+                           <XAxis dataKey="name"/>
+                           <YAxis/>
+                           <CartesianGrid strokeDasharray="3 3"/>
+                           <Tooltip/>
+                           <Legend />
+                           <Line type="monotone" dataKey="thisYear" stroke="#8884d8" activeDot={{r: 8}}/>
+                           <Line type="monotone" dataKey="lastYear" stroke="#82ca9d" />
+                         </LineChart>
+                    </Grid.Column>
+                    <Grid.Column width={7} className="borderNone">
 
-            </Segment>
+                      <Accordion panels={panels} className="customerAccordion" styled />
+
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+            // </Segment>
 
             }
 

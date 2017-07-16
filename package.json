@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aws-sdk": "latest",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "firebase": "^4.0.0",
@@ -25,6 +26,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "node build/server.js",
+
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
