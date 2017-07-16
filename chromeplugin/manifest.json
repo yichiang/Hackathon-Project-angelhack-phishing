@@ -12,10 +12,7 @@
      "default_popup": "popup.html"
   },
   "permissions": [
-    "declarativeContent",
-    "activeTab",
-    "tabs",
-    "https://ajax.googleapis.com/"
+    "tabs"
   ],
   "browser_action": {
     "default_title": "SWORDPHISH Content Guard",
