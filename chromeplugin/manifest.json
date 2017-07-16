@@ -3,12 +3,18 @@
   "name": "Project SWORDPHISH Demo",
   "description": "This extension demos the SWORDPHISH content guard",
   "version": "1.0",
-  "browser-action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+     "default_icon": "icon.png",
+     "default_popup": "popup.html"
   },
   "permissions": [
+    "declarativeContent",
     "activeTab",
+    "tabs",
     "https://ajax.googleapis.com/"
   ],
   "browser_action": {
