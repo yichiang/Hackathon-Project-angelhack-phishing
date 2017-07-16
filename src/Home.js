@@ -173,7 +173,7 @@ class Home extends Component {
                                             <Icon name='warning sign' color='orange' />
                                           }
                                           {t.danger == 3 &&
-                                            <Icon name='warning sign' color='orange' />
+                                            <Icon name='check circle' color='green' />
                                           }
                                           <span className="country">
                                             From
